@@ -1,0 +1,47 @@
+
+
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">UPDATE BRANCH</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container ">
+                <div class="row">
+                    <!-- contact form -->
+                    <div class="col-lg-6 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4">
+                            <div class="input-group1 text-right">
+                                <a routerLink="/layout/manage-branch">
+                                    <button class="btn btn-outline-dark" type="submit">Manage</button>
+                                </a>
+                            </div>
+                            <form [formGroup]="updatebranch" (submit)="update()">
+                                <div class="form-group">
+                                    <label for="">Select Department</label>
+                                    <ng-select formControlName="departmentId">
+                                        <ng-option *ngFor="let dept of alldepartment;" [value]="dept._id">{{dept.departmentName}}</ng-option>
+                                     </ng-select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <input class="form-control" type="text" name="w3lName" id="w3lName"
+                                        placeholder="Branch" required="" formControlName="branchName">
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn btn-outline-dark mx-auto d-block" type="submit">UPDATE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- //contact -->
+

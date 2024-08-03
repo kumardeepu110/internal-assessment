@@ -1,0 +1,74 @@
+<ngx-spinner 
+    bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">ADD SUBJECT</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <!-- contact form -->
+                    <div class="col-lg-6 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4">
+                            <div class="input-group1 text-right">
+                                <a routerLink="/layout/manage-subject">
+                                    <button class="btn btn-outline-dark" type="submit">Manage</button>
+                                </a>
+                            </div>
+                            <form [formGroup]="addsubject" (submit)="add()">
+                                <div class="row">
+                                    <div class="col-sm-6 pr-sm-1 form-group">
+                                        <label for="">Select Department</label>
+                                        <ng-select formControlName="departmentId">
+                                            <ng-option *ngFor="let dept of alldept;"[value]="dept._id">{{dept.departmentName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Branch</label>
+                                        <ng-select formControlName="branchId">
+                                            <ng-option *ngFor="let branch of allbranch;"[value]="branch._id">{{branch.branchName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-12 pr-sm-1">
+                                        <label for="">Select Course</label>
+                                        <ng-select formControlName="courseId">
+                                            <ng-option *ngFor="let course of allcourse;"[value]="course._id">{{course.courseName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 pr-sm-1 form-group">
+                                        <label for="">Subject</label>
+                                        <input class="form-control" type="text" name="w3lName" id="w3lName"
+                                            placeholder="Subject" required="" formControlName="subjectName">
+                                    </div>
+                                    <div class="col-sm-6 form-group pr-sm-1">
+                                        <label for="">Subject Code</label>
+                                        <input class="form-control" type="text" name="w3lName" id="w3lName"
+                                            placeholder="Subject Code" required="" formControlName="subjectCode">
+                                    </div>
+                                    <div class="col-sm-12 form-group pr-sm-1">
+                                        <label for="">Semester</label>
+                                        <input class="form-control" type="number" name="w3lName" id="w3lName"
+                                            placeholder="Semester" required="" formControlName="semester">
+                                    </div>
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn btn-outline-dark mx-auto d-block" type="submit">ADD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- //contact -->
+

@@ -1,0 +1,51 @@
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">MANAGE BRANCH</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <!-- contact form -->
+                    <div class="col-lg-10 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4 table-responsive">
+                            <div class="my-1">
+                                <a routerLink="/layout/branch">
+                                    <button class="btn btn-outline-dark" type="submit">ADD</button>                    
+                                </a>
+                            </div>
+                            <table class="table table-hover table-striped table-bordered">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>#</th>
+                                        <th>Department Name</th>
+                                        <th>Branch Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr *ngFor="let branch of allbranch; let i = index">
+                                        <td>{{ i+1 }}</td>
+                                        <td>{{ branch.departmentId.departmentName }}</td>
+                                        <td>{{ branch.branchName }}</td>
+                                        <td>
+                                            <a [routerLink]="['/layout/update-branch', branch._id]">
+                                                <i class="fa fa-edit text-success"></i>
+                                            </a>
+                                            <i class="fa fa-trash text-danger" (click)="deleteuser(branch._id)"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- //contact -->
+

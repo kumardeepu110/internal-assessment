@@ -1,0 +1,88 @@
+
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand">
+                        <!-- <img class="img-fluid" src="assets/images/logo.png" alt=" hii"> -->
+                        
+                        <p class="h4">DAVIET Internal Assessment</p>
+                    </a>
+                </h1>
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active" *ngIf="usertype == 2 || usertype == 3 || usertype == null">
+                            <a class="nav-link" routerLink="/layout/home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 2 || usertype == 3">
+                            <a class="nav-link" routerLink="/layout/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 2">
+                            <a class="nav-link" routerLink="/layout/marks">Marks</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 2">
+                            <a class="nav-link" routerLink="/layout/view-internal">View Internal</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 2">
+                            <a class="nav-link" routerLink="/layout/show-classes">Show Classes</a>
+                        </li>
+                        <li class="nav-item" *ngIf="email == null">
+                            <a class="nav-link" routerLink="/layout/admin-login">Admin Login</a>
+                        </li>
+                        <li class="nav-item" *ngIf="email == null">
+                            <a class="nav-link" routerLink="/layout/login">Teacher Login</a>
+                        </li>
+                        <li class="nav-item" *ngIf="email == null">
+                            <a class="nav-link" routerLink="/layout/student-login">Student Login</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 3">
+                            <a class="nav-link" routerLink="/layout/internal-assessment-view">Internal Assessment View</a>
+                        </li>
+                        
+                        <li class="nav-item" *ngIf="usertype == 2 || usertype == 3 || usertype == null">
+                            <a class="nav-link" routerLink="/layout/about">About</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 2 || usertype == 3 || usertype == null">
+                            <a class="nav-link" routerLink="/layout/contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/department">Department</a>
+                        </li>
+                        <li class="nav-item"*ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/branch">Branch</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/courses">Course</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/subject">Subject</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/students">Student</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/teachers">Teacher</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/assign-staff">Assign Teacher</a>
+                        </li>
+                        <li class="nav-item" *ngIf="usertype == 1">
+                            <a class="nav-link" routerLink="/layout/register">Reg</a>
+                        </li>
+                        <li class="nav-item" *ngIf="email">
+                            <a class="nav-link" (click)="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--//header-->

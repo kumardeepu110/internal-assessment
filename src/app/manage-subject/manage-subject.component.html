@@ -1,0 +1,57 @@
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">MANAGE SUBJECT</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4 table-responsive">
+                            <div class="my-1">
+                                <a routerLink="/layout/subject">
+                                    <button class="btn btn-outline-dark" type="submit">ADD</button>                    
+                                </a>
+                            </div>
+                            <table class="table table-hover table-striped table-bordered">
+                                <thead class="text-center table-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Department Name</th>
+                                        <th>Branch Name</th>
+                                        <th>Course Name</th>
+                                        <th>Subject Name</th>
+                                        <th>Subject Code</th>
+                                        <th>Semester</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr *ngFor="let subject of allsubject; let i = index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{subject.departmentId.departmentName}}</td>
+                                        <td>{{subject.branchId.branchName}}</td>
+                                        <td>{{subject.courseId.courseName}}</td>
+                                        <td>{{subject.subjectName}}</td>
+                                        <td>{{subject.subjectCode}}</td>
+                                        <td>{{subject.semester}}</td>
+                                        <td>
+                                            <a [routerLink]="['/layout/update-subject', subject._id]">
+                                                <i class="fa fa-edit text-success"></i>
+                                            </a>
+                                            <i class="fa fa-trash text-danger" (click)="deleteuser(subject._id)"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+

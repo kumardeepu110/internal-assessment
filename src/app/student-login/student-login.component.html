@@ -1,0 +1,62 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<!-- inner banner -->
+<div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+        STUDENT LOGIN
+      </h4>
+    </div>
+  </section>
+</div>
+<!-- //inner banner -->
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <!-- contact form -->
+      <div class="col-lg-6 mx-auto content-form-right p-0">
+        <div class="form-w3ls p-md-5 p-4">
+          <form [formGroup]="loginform" (submit)="login()">
+            <div class="form-group">
+              <label for="">Email</label>
+              <input
+                class="form-control"
+                type="email"
+                id="w3lSender"
+                placeholder="Email"
+                required=""
+                formControlName="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input
+                class="form-control"
+                type="password"
+                id="w3lName"
+                placeholder="Password"
+                required=""
+                formControlName="password"
+              />
+            </div>
+            <div class="input-group1 text-right">
+              <button class="btn button-style mx-auto d-block" type="submit">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //contact -->

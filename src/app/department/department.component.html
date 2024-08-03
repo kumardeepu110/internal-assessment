@@ -1,0 +1,41 @@
+
+
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">ADD DEPARTMENT</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <!-- contact form -->
+                    <div class="col-lg-6 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4">
+                            <div class="input-group1 text-right">
+                                <a routerLink="/layout/manage-department">
+                                    <button class="btn btn-outline-dark" type="submit">Manage</button>
+                                </a>
+                            </div>
+                            <form [formGroup]="adddepartment" (submit)="add()">
+                                <div class="form-group">
+                                    <label for="">Department</label>
+                                    <input class="form-control" type="text" id="department"
+                                        placeholder="Department" required="" formControlName="departmentName">
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn btn-outline-dark mx-auto d-block" type="submit">ADD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contact -->
+

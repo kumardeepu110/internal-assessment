@@ -1,0 +1,88 @@
+
+<ngx-spinner 
+    bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">ADD STUDENTS</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4">
+                            <div class="input-group1 text-right">
+                                <a routerLink="/layout/manage-student">
+                                    <button class="btn btn-outline-dark" type="submit">Manage</button>
+                                </a>
+                            </div>
+                            <form [formGroup]="addstudent" (submit)="add()">
+                                <div class="row">
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Department</label>
+                                        <ng-select formControlName="departmentId">
+                                            <ng-option *ngFor="let dept of alldept;" [value]="dept._id">{{dept.departmentName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Branch</label>
+                                        <ng-select formControlName="branchId">
+                                            <ng-option *ngFor="let branch of allbranch;" [value]="branch._id">{{branch.branchName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-12 pr-sm-1">
+                                        <label for="">Select Course</label>
+                                        <ng-select formControlName="courseId">
+                                            <ng-option *ngFor="let course of allcourse" [value]="course._id">{{course.courseName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Student Name</label>
+                                        <input class="form-control" type="text" 
+                                            placeholder="Student Name" required="" formControlName="studentName">
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Student Email</label>
+                                        <input class="form-control" type="email"
+                                            placeholder="Student Email" required="" formControlName="studentEmail">
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Student Password</label>
+                                        <input class="form-control" type="password" 
+                                            placeholder="Student Password" required="" formControlName="studentPassword">
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Section</label>
+                                        <input class="form-control" type="text"
+                                            placeholder="Section" required="" formControlName="section">
+                                    </div>
+                                    <div class="col-sm-6 form-group pr-sm-1">
+                                        <label for="">Roll No.</label>
+                                        <input class="form-control" type="number"
+                                            placeholder="Roll Number" required="" formControlName="roll_no">
+                                    </div>
+                                    <div class="col-sm-6 form-group pr-sm-1">
+                                        <label for="">University Roll No.</label>
+                                        <input class="form-control" type="number"
+                                            placeholder="University Roll Number" required="" formControlName="university_roll_no">
+                                    </div>
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn btn-outline-dark mx-auto d-block" type="submit">ADD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+

@@ -1,0 +1,104 @@
+<ngx-spinner 
+    bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">Contact Us</h4>
+            </div>
+        </section>
+    </div>
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row pt-3 pb-5">
+                    <!-- map -->
+                    <div class="col-lg-4 map mt-lg-0 pl-3">
+                        <h4 class="mb-4 sec-title-w3 h3 text-dark">Our Address</h4>
+                        <div>
+                            <p class="h6">Give us a call or drop by 09:00 AM to 05:00 PM, we endeavour to answer all enquiries within 08 hours on business days.</p><br>
+                        </div>
+                        <div>
+                            <p class="h5 text-dark"><b>Address :</b></p>
+
+                            <p ><span class="h6 text-dark"><b>Head Office :</b></span> Kabir Nagar, DAV Institute of Engineering & Technology, Near Burlcon Park, Jalandhar City, Punjab 144008</p><br>
+
+                            <p class="h5 text-dark"><b>Phone :</b></p>
+                            <p>(0181) 220-7650, <br> 220-2343-46</p><br>
+
+                            <p class="h5 text-dark"><b>Email :</b></p>
+                            <p>daviet@davietjal.org</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <!-- contact form -->
+                    <div class="col-lg-7 content-form-right ">
+                        <div class="form-w3ls">
+                            <h4 class="mb-4 sec-title-w3 h3 text-dark">Drop a message</h4>
+                            <form [formGroup]="contact" (submit)="send()">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group pr-sm-1">
+                                        <input class="form-control" type="text"
+                                            placeholder="First Name" required="" formControlName="fname">
+                                    </div>
+                                    <div class="col-sm-6 form-group pl-sm-1">
+                                        <input class="form-control" type="text"
+                                            placeholder="Last Name" required="" formControlName="lname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="email"
+                                        placeholder="Email" required="" formControlName="email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="number"
+                                        placeholder="Phone Number" required="" formControlName="phone">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control"
+                                        placeholder="Message" required="" formControlName="message"></textarea>
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn button-style mx-auto d-block" type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- //contact -->
+    <!-- support -->
+    <!-- <div class="support py-5" id="support">
+        <div class="container pb-md-5 pb-3">
+            <h3 class="title-w3ls text-center mb-5">Help & Support</h3>
+            <div class="row support-bottom text-center mb-5">
+                <div class="col-lg-4 col-sm-6 support-grid">
+                    <span class="fa fa-laptop"></span>
+                    <h5 class="text-uppercase mt-3 mb-2">Online Support</h5>
+                    <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    <a href="#call" class="btn button-style button-2 mt-4">
+                        Call Now
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 support-grid mt-sm-0 mt-4">
+                    <span class="fa fa-comments"></span>
+                    <h5 class="text-uppercase mt-3 mb-2">Live Chat 24/7</h5>
+                    <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    <a href="#chat" class="btn button-style button-2 mt-4">
+                        Let's Chat
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 support-grid mt-lg-0 mt-4">
+                    <span class="fa fa-question"></span>
+                    <h5 class="text-uppercase mt-3 mb-2">Any Questions</h5>
+                    <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    <a href="#ask" class="btn button-style button-2 mt-4">
+                        Ask Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- support -->
+

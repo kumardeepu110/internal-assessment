@@ -1,0 +1,72 @@
+
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">ASSIGN SUBJECT TO STAFF</h4>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+                <div class="row">
+                    <!-- contact form -->
+                    <div class="col-lg-6 mx-auto content-form-right p-0">
+                        <div class="form-w3ls p-md-5 p-4">
+                            <div class="input-group1 text-right">
+                                <a routerLink="/layout/manage-assign-staff">
+                                    <button class="btn btn-outline-dark" type="submit">Manage </button>
+                                </a>
+                            </div>
+                            <form [formGroup]="assignteacher" (submit)="assign()">
+                                <div class="row">
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select department</label>
+                                        <ng-select formControlName="departmentId">
+                                            <ng-option *ngFor="let assign of alldept;" [value]="assign._id">{{assign.departmentName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Branch</label>
+                                        <ng-select formControlName="branchId">
+                                            <ng-option *ngFor="let assign of allbranch;" [value]="assign._id">{{assign.branchName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Course</label>
+                                        <ng-select formControlName="courseId">
+                                            <ng-option *ngFor="let assign of allcourse;" [value]="assign._id">{{assign.courseName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Subject</label>
+                                        <ng-select formControlName="subjectId">
+                                            <ng-option *ngFor="let assign of allsubject;" [value]="assign._id">{{assign.subjectName}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Semester</label>
+                                        <ng-select formControlName="semester">
+                                            <ng-option *ngFor="let semester of allsubject;" [value]="semester._id">{{semester.semester}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                    <div class="form-group col-sm-6 pr-sm-1">
+                                        <label for="">Select Teacher</label>
+                                        <ng-select formControlName="teacherId">
+                                            <ng-option *ngFor="let teacher of allteacher;" [value]="teacher._id">{{teacher.name}}</ng-option>
+                                         </ng-select>
+                                    </div>
+                                </div>
+                                <div class="input-group1 text-right">
+                                    <button class="btn btn-outline-dark mx-auto d-block" type="submit">ADD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- //contact -->
+
